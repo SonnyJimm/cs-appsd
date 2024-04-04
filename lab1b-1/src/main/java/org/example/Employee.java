@@ -10,7 +10,9 @@ public record Employee(Long employeeId, String firstName, String lastName, Local
         }
         var eligibleDate = employementDate.plusYears(5l);
         var nextMonth = LocalDate.now().plusMonths(1l);
-        return eligibleDate.isBefore(nextMonth);
+        var nextMonthFirstDay = LocalDate.of(nextMonth.getYear(),nextMonth.getMonth(),1);
+        var nextMonthLastDay = LocalDate.of(nextMonth.getYear(),nextMonth.getMonth(),nextMonth.getMonth().maxLength());
+        return eligibleDate.isAfter(nextMonthFirstDay) && eligibleDate.isBefore(nextMonthLastDay);
     }
     public String toString(){
         Optional<PensionPlan> p = Optional.ofNullable(plan);
