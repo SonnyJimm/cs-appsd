@@ -10,4 +10,4 @@
  - View patient list
 
 ## Class diagram
-![render](https://github.com/SonnyJimm/cs-appsd/lab-2/lab2.png) 
+![render](https://github.com/SonnyJimm/cs-appsd/blob/main/lab-2/lab2.png) 
