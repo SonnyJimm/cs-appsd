@@ -27,4 +27,6 @@ Dependency injection is putting the dependency like a factory method  no hardcod
 ### What is Inversion of Control (IoC) and how is it related to Spring?
 The  frame work calls the code. Springs idea is Dependency injection and inversion of control. 
 
+# Lab 4
 
+![render](https://github.com/SonnyJimm/cs-appsd/blob/main/lab2/screenshots/SpringThymeLeaf.png)
