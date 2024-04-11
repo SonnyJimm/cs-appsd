@@ -6,9 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DentistService {
-    @Autowired
+public class DentistService implements IDentistService {
     private DentistRepository dentistRepository;
+
+    public DentistService(DentistRepository dentistRepository) {
+        this.dentistRepository = dentistRepository;
+    }
     public Dentist save(Dentist dentist){
         return dentistRepository.save(dentist);
     }

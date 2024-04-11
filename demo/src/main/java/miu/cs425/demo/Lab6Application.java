@@ -16,18 +16,22 @@ import java.time.ZoneId;
 
 @SpringBootApplication
 public class Lab6Application implements CommandLineRunner {
-	@Autowired
 	private Faker faker;
-	@Autowired
-	private AddressService addressService;
-	@Autowired
-	private AppointmentService appointmentService;
-	@Autowired
-	private DentistService dentistService;
-	@Autowired
-	private PatientService patientService;
-	@Autowired
-	private SurgeryService surgeryService;
+	private IAddressService addressService;
+	private IAppointmentService appointmentService;
+	private IDentistService dentistService;
+	private IPatientService patientService;
+	private ISurgeryService surgeryService;
+
+	public Lab6Application(Faker faker, IAddressService addressService, IAppointmentService appointmentService, IDentistService dentistService, IPatientService patientService, ISurgeryService surgeryService) {
+		this.faker = faker;
+		this.addressService = addressService;
+		this.appointmentService = appointmentService;
+		this.dentistService = dentistService;
+		this.patientService = patientService;
+		this.surgeryService = surgeryService;
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(Lab6Application.class, args);
 	}

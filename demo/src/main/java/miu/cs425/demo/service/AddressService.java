@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AddressService {
-    @Autowired
+public class AddressService implements IAddressService{
     private AddressRepository addressRepository;
-    @Autowired
     private Faker faker;
+    public AddressService(AddressRepository addressRepository, Faker faker){
+        this.addressRepository = addressRepository;
+        this.faker = faker;
+    }
 
     public Address getFakeAddress(){
         var address=faker.address();
