@@ -20,7 +20,7 @@ public class Main {
     public void printListEligible(){
 //        System.out.println(list.get(1).isEligiblePension());
 //        System.out.println(list.get(1).plan());
-        list.stream().filter(Employee::isEligiblePension).sorted(Comparator.comparing(Employee::employementDate)).forEach(System.out::println);
+        list.stream().filter(Employee::isEligiblePension).sorted(Comparator.comparing(Employee::employementDate));
     }
     public static void main(String[] args) {
         var m = new Main();
